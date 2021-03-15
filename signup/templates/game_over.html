@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>website</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,500' %}">
+    <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Ranchers' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Registration-Form-with-Photo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Team-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Team-Grid.css' %}">
+</head>
+
+<body style="background: url({% static 'assets/img/BlurredBG.png' %}) top / cover no-repeat;">
+    <h1 class="display-1 text-monospace text-center" style="margin-top: 50vh;color: rgb(0,0,0);font-family: Montserrat, sans-serif;text-shadow: 0px 7px 6px rgb(122,122,122);margin-bottom: 50vh;filter: blur(0px);">
+            <a href="{% url 'core:home' %}">Game Over</a>
+        </h1>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/smart-forms.min.js' %}"></script>
+</body>
+
+</html>

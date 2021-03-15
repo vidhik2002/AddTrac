@@ -8,6 +8,7 @@ from django.contrib.auth.models import User, auth
 
 def login(request):
     if request.method == "POST":
+
         username = request.POST.get("username")
         password = request.POST.get('password')
         if None in [username, password]:
@@ -16,8 +17,9 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
 
         if user is not None:
+            print("Hi")
             auth.login(request, user)
-            return redirect("/index")
+            return redirect("core:home")
         else:
             messages.info(request, "invalid credentials")
             return redirect("login")
@@ -47,7 +49,7 @@ def register(request):
             else:
                 user = User.objects.create_user(first_name=first_name, username=username, password=password1, email=email, last_name=last_name)
                 user.save()
-                return redirect("index")
+                return redirect("core:home")
         else:
             messages.info(request, "Password Not Matching")
             return redirect('register')

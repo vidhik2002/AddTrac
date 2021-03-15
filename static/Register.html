@@ -1,30 +1,28 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">q
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>website</title>
-    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Clean.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/Registration-Form-with-Photo.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Ranchers' %}">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 
 <body style="background: rgba(0,0,0,0.1);">
     <section class="register-photo"
-        style="background: url({% static 'assets/img/BlurredBG.png' %}) top / cover no-repeat;width: 100vw;min-height: 100vh;">
+        style="background: url(&quot;assets/img/BlurredBG.png&quot;) top / cover no-repeat;width: 100vw;min-height: 100vh;">
         <div class="form-container" style="width: 580.0px;">
             <form method="post">
-                {% csrf_token %}
                 <h2 class="text-center"><strong>Create</strong> an account.</h2>
-                <div class="form-group"><input class="form-control" type="text" name="email" placeholder="First Name"></div>
-                    <div class="form-group"><input class="form-control" type="text" name="email"
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="First Name"></div>
+                    <div class="form-group"><input class="form-control" type="email" name="email"
                             placeholder="Last Name"></div>
-                    <div class="form-group"><input class="form-control" type="text" name="email"
+                    <div class="form-group"><input class="form-control" type="email" name="email"
                             placeholder="Username"></div>
                     <div class="form-group"><input class="form-control" type="email" name="email"
                                 placeholder="Email"></div>
@@ -37,13 +35,14 @@
                                         type="checkbox">I agree to the license terms.</label></div>
                         </div>
                         <div class="form-group"><button class="btn btn-primary btn-block" type="submit"
-                                style="background: #88320c;">Sign Up</button></div><a class="already" href="{% url 'login' %}">You
+                                style="background: #88320c;">Sign Up</button></div><a class="already" href="#">You
                             already have an account? Login here.</a>
             </form>
         </div>
     </section>
-    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
-    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
 </body>
 
 </html>
