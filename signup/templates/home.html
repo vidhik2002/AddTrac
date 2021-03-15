@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home Page</title>
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,500' %}">
-    <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Ranchers' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ranchers">
     <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Clean.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/Registration-Form-with-Photo.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
@@ -21,23 +21,38 @@
     <style>
         #drillpath {
             width: 400px;
-            height: auto;
-            /* animation-name: down;
-            animation-duration: 60s;
-            animation-iteration-count: infinite; */
+            height: 1200vh;
+
+            animation-name: down;
+            animation-duration: 25s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+
+
+        }
+
+        #section {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-size: cover;
+            animation-name: BGup;
+            animation-duration: 500s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            height: 1200vh;
+            animation-delay: 2s;
 
 
         }
 
         body {
-            
-            animation-name: BGup;
-            animation: 60s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            height: 1200vh;
-            
-
+            overflow: hidden;
+            /* Hide scrollbars */
+            height:1200vh ;
         }
 
         /* @keyframes down {
@@ -53,21 +68,35 @@
             }
 
         } */
-        @keyframes BGup {
+        @-webkit-keyframes BGup {
             from {
-     transform: translateY(0);
-   }
-   to { 
-     transform: translateY(-187%);
-   }
+                -webkit-transform: translateY(0%);
+            }
+
+            to {
+                -webkit-transform: translateY(-187%);
+            }
 
         }
 
+        @-webkit-keyframes down {
+            from {
+                margin-top: 100px;
+                margin-bottom: 0px;
+
+            }
+
+            to {
+                margin-top: 1200px;
+                margin-bottom: 0px;
+            }
+
+        }
     </style>
 </head>
 
-<body style="background: url({% static 'assets/img/HomeBgNew.png' %}) top / cover no-repeat;">
-    <section id="section">
+<body>
+    <section id="section" style="background: url({% static 'assets/img/HomeBgNew.png' %}) top / cover no-repeat;">
         <nav class="navbar navbar-light navbar-expand-md text-center"
             style="text-align: center;text-shadow: 0px 0px;box-shadow: 0px 4px 12px 6px;">
             <div class="container-fluid"><a class="navbar-brand" href="#"
@@ -80,7 +109,7 @@
                                 style="font-size: 45px;font-family: Ranchers, cursive;">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'core:profile' %}"
                                 style="font-size: 45px;font-family: Ranchers, cursive;">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url "accounts:login" %}"
+                        <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}"
                                 style="font-size: 45px;font-family: Ranchers, cursive;">Login</a></li>
                     </ul>
                 </div>
@@ -88,7 +117,7 @@
         </nav>
         <div id="drillpath" style="margin: auto;margin-top: 325px;">
             <div class="shake animated infinite" id="drill"
-                style="height: 400px;width: 400px;color: rgb(255,5,5);background: url(&quot;assets/img/drill.png&quot;) center / contain no-repeat, rgba(0,0,0,0);">
+                style="height: 400px;width: 400px;color: rgb(255,5,5);background: url({% static 'assets/img/drill.png' %}) center / contain no-repeat;">
             </div>
         </div>
 
