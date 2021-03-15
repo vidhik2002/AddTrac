@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Clean.css'%}">
     <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Ranchers' %}">
 </head>
 
 <body style="background: rgb(255,255,255);">
@@ -27,6 +28,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/smart-forms.min.js"></script>
 
+    <script type="text/javascript" src="{% static 'extra/checkInactive.js' %}"></script>
     <div>
         {% for i in messages %}
           <h4>{{ i }}</h4>

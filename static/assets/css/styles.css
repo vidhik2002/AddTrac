@@ -1,6 +1,8 @@
-body {
+ body {
   background: rgb(0,0,0);
   color: rgb(255,255,255);
+  font-family:"Ranchers",sans-serif ;
+  text-shadow: 3px 3px 3px #ababab
 }
 
 #section {
@@ -8,4 +10,3 @@ body {
   height: 100vh;
   background: url("") top / cover no-repeat;
 }
-
